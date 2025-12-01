@@ -27,7 +27,7 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: '@nuxtjs/mhj-svg-sprite',
+    name: 'mhj-svg-sprite',
     configKey: 'svgSprite',
     compatibility: {
       nuxt: '>=3.0.0'

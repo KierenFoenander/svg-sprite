@@ -60,7 +60,7 @@ const props = defineProps({
   }
 })
 
-useHead({ title: 'Icons list - @nuxtjs/mhj-svg-sprite' })
+useHead({ title: 'Icons list - mhj-svg-sprite' })
 
 const query = ref('')
 const filteredSprites = computed(() => {

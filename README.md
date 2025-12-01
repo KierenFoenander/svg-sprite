@@ -1,7 +1,7 @@
 # SVG Sprite Module
 
-[![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/mhj-svg-sprite/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/mhj-svg-sprite)
-[![npm](https://img.shields.io/npm/dt/@nuxtjs/mhj-svg-sprite.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/mhj-svg-sprite)
+[![npm (scoped with tag)](https://img.shields.io/npm/v/mhj-svg-sprite/latest.svg?style=flat-square)](https://npmjs.com/package/mhj-svg-sprite)
+[![npm](https://img.shields.io/npm/dt/mhj-svg-sprite.svg?style=flat-square)](https://npmjs.com/package/mhj-svg-sprite)
 
 > Optimized and Easy way to use SVG files in Nuxt
 
@@ -16,18 +16,18 @@ Sprites help increase speed, maintain a consistent development workflow, and mak
 ## Installation
 
 ```bash
-yarn add @nuxtjs/mhj-svg-sprite
+yarn add mhj-svg-sprite
 # or
-npm i @nuxtjs/mhj-svg-sprite
+npm i mhj-svg-sprite
 ```
 
 ## Usage
 
-Add `@nuxtjs/mhj-svg-sprite` to modules section of `nuxt.config`:
+Add `mhj-svg-sprite` to modules section of `nuxt.config`:
 
 ```ts
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/mhj-svg-sprite"],
+  modules: ["mhj-svg-sprite"],
   svgSprite: {
     // manipulate module options
   },
@@ -68,7 +68,7 @@ You can update them with the `svgSprite` option in `nuxt.config`:
 
 ```js
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/mhj-svg-sprite'],
+  modules: ['mhj-svg-sprite'],
   svgSprite: {
     input: '~/assets/svg/'
   }
