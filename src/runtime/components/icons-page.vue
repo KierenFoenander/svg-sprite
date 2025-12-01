@@ -4,7 +4,11 @@
       <input v-model="query" class="_icon-search" placeholder="Search Icons">
     </div>
     <div>
-      <div v-for="sprite of filteredSprites" :key="sprite.name" class="_icon-preview-wrapper">
+      <div
+        v-for="sprite of filteredSprites"
+        :key="sprite.name"
+        class="_icon-preview-wrapper"
+      >
         <h2 class="_icon-sprite-title">
           {{ sprite.name }}
         </h2>
@@ -13,9 +17,7 @@
           :key="symbol.key"
           class="_icon-preview"
         >
-          <div
-            class="_icon-card"
-          >
+          <div class="_icon-card">
             <div class="_icon-svg">
               <svg-icon
                 :name="symbol.key"
@@ -58,12 +60,12 @@ const props = defineProps({
   }
 })
 
-useHead({ title: 'Icons list - @nuxtjs/svg-sprite' })
+useHead({ title: 'Icons list - @nuxtjs/mhj-svg-sprite' })
 
 const query = ref('')
 const filteredSprites = computed(() => {
   return icons
-    .filter(icon => query.value ? icon.match(query.value || '') : true)
+    .filter(icon => (query.value ? icon.match(query.value || '') : true))
     .reduce((acc, icon) => {
       const [sprite, name] = icon.split('/')
       acc[sprite] = acc[sprite] || {
@@ -95,7 +97,7 @@ const copy = (e) => {
   box-sizing: border-box;
 }
 ._icon-container * {
-  box-sizing: inherit
+  box-sizing: inherit;
 }
 ._icon-search-wrapper {
   margin: 10px 25px;

@@ -1,7 +1,7 @@
 # SVG Sprite Module
 
-[![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/svg-sprite/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/svg-sprite)
-[![npm](https://img.shields.io/npm/dt/@nuxtjs/svg-sprite.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/svg-sprite)
+[![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/mhj-svg-sprite/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/mhj-svg-sprite)
+[![npm](https://img.shields.io/npm/dt/@nuxtjs/mhj-svg-sprite.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/mhj-svg-sprite)
 
 > Optimized and Easy way to use SVG files in Nuxt
 
@@ -16,24 +16,22 @@ Sprites help increase speed, maintain a consistent development workflow, and mak
 ## Installation
 
 ```bash
-yarn add @nuxtjs/svg-sprite
+yarn add @nuxtjs/mhj-svg-sprite
 # or
-npm i @nuxtjs/svg-sprite
+npm i @nuxtjs/mhj-svg-sprite
 ```
 
 ## Usage
 
-Add `@nuxtjs/svg-sprite` to modules section of `nuxt.config`:
+Add `@nuxtjs/mhj-svg-sprite` to modules section of `nuxt.config`:
 
 ```ts
 export default defineNuxtConfig({
-  modules: [
-    '@nuxtjs/svg-sprite',
-  ],
+  modules: ["@nuxtjs/mhj-svg-sprite"],
   svgSprite: {
     // manipulate module options
-  }
-})
+  },
+});
 ```
 
 Place your svg files in `~/assets/sprite/svg/`, say `sample.svg` and use your image with globally registered `svg-icon` component:
@@ -55,23 +53,22 @@ Module create a page that list all of icons for you, by default you can see this
 
 Module default options:
 
-
-| Option | Default | Description |
-| ------ | ------- | ----------- |
-| input | `~/assets/sprite/svg` | Directory of original svg files |
-| output | `~/assets/sprite/gen` | Directory to store generated sprites |
-| defaultSprite | `icons` | Name of default sprite (default sprite consist of all svgs that place directly inside `input` directory) |
-| elementClass | `icon` | global class of all `<svg-icon>` instances |
-| spriteClassPrefix | `sprite-` | Prefix of sprite specific classes |
-| publicPath | `null` | Specifies a custom public path for the sprites |
-| iconsPath | `_icons` | Custom path for icons list page (In order to disable this page, pass `false` or `null` to this option) |
-| svgoConfig | `null` | Custom config object for SVGO, [How to customize SVGO config](/docs/svgo-config.md) |
+| Option            | Default               | Description                                                                                              |
+| ----------------- | --------------------- | -------------------------------------------------------------------------------------------------------- |
+| input             | `~/assets/sprite/svg` | Directory of original svg files                                                                          |
+| output            | `~/assets/sprite/gen` | Directory to store generated sprites                                                                     |
+| defaultSprite     | `icons`               | Name of default sprite (default sprite consist of all svgs that place directly inside `input` directory) |
+| elementClass      | `icon`                | global class of all `<svg-icon>` instances                                                               |
+| spriteClassPrefix | `sprite-`             | Prefix of sprite specific classes                                                                        |
+| publicPath        | `null`                | Specifies a custom public path for the sprites                                                           |
+| iconsPath         | `_icons`              | Custom path for icons list page (In order to disable this page, pass `false` or `null` to this option)   |
+| svgoConfig        | `null`                | Custom config object for SVGO, [How to customize SVGO config](/docs/svgo-config.md)                      |
 
 You can update them with the `svgSprite` option in `nuxt.config`:
 
 ```js
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/svg-sprite'],
+  modules: ['@nuxtjs/mhj-svg-sprite'],
   svgSprite: {
     input: '~/assets/svg/'
   }
@@ -80,15 +77,17 @@ export default defineNuxtConfig({
 
 ## Props
 
-| Prop | Description |
-| --- | --- |
-| name | icon path with format `SPRITE_NAME/ICON_NAME`, `SPRITE_NAME` can be omitted for default sprite  |
-| title | Accessibility title for icon, this props will transform to `<title>` tag inside `<svg>` |
-| desc | Accessibility description for icon, this props will transform to `<desc>` tag inside `<svg>` |
+| Prop  | Description                                                                                    |
+| ----- | ---------------------------------------------------------------------------------------------- |
+| name  | icon path with format `SPRITE_NAME/ICON_NAME`, `SPRITE_NAME` can be omitted for default sprite |
+| title | Accessibility title for icon, this props will transform to `<title>` tag inside `<svg>`        |
+| desc  | Accessibility description for icon, this props will transform to `<desc>` tag inside `<svg>`   |
 
 ## Integrations
+
 ### Storybook
-This module provides a story to list and search available icons of your project. You can see stories under `stories` directory. 
+
+This module provides a story to list and search available icons of your project. You can see stories under `stories` directory.
 If you are using [`@nuxtjs/storybook`](https://storybook.nuxtjs.org) you can see the SvgSprites stories under `Modules` section in your storybook. Sprites will show in your Storybook, unless you disable/hide the story using [Storybook's `modules` option](https://storybook.nuxtjs.org/options#modules)
 
 ## Development
